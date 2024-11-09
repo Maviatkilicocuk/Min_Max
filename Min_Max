@@ -1,0 +1,34 @@
+package Giris;
+import java.util.Scanner;
+public class Min_Max {
+    public static void main(String[] args) {
+        int x,y=0,z,big,small;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen girilecek sayı miktarını giriniz : ");
+        x = input.nextInt();
+        y = 1;
+        System.out.print(y+ ". sayıyı giriniz : ");
+        z = input.nextInt();
+        System.out.print("");
+        small =big = z;
+        do {
+            y += 1;
+            System.out.print(y+ ". sayıyı giriniz : ");
+            z = input.nextInt();
+            System.out.print("");
+
+            if(z<small){
+                small = z;
+            }
+            if(big<z){
+                big = z;
+            }
+
+        }while(x!=y);
+
+        System.out.println("En büyük sayı = " +big);
+        System.out.print("En küçük sayı = " +small);
+    }
+}
